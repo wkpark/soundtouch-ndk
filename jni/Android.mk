@@ -17,9 +17,11 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE    := sonic
+LOCAL_MODULE    := libsonic_jni
 LOCAL_SRC_FILES := sonicjni.c sonic.c
-LOCAL_CFLAGS    := -Wall
+#LOCAL_CFLAGS    := -Wall
 LOCAL_LDLIBS    := -llog
+
+LOCAL_SHARED_LIBRARY := liblog
 
 include $(BUILD_SHARED_LIBRARY)

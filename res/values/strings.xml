@@ -2,4 +2,9 @@
 <resources>
     <string name="app_name">SonicTest</string>
     <string name="hello">Hello, Bill!</string>
+    <string name="speed">Speed</string>
+    <string name="rate">Rate</string>
+    <string name="pitch">Pitch</string>
+    <string name="play">Play</string>
+    <string name="one">1.0</string>
 </resources>
