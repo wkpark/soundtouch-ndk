@@ -6,10 +6,10 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
-LOCAL_PACKAGE_NAME := sonic-test
+LOCAL_PACKAGE_NAME := soundtouch-test
 
-LOCAL_JNI_SHARED_LIBRARIES := libsonic_jni
+LOCAL_JNI_SHARED_LIBRARIES := libsoundtouch_jni
 
-LOCAL_REQUIRED_MODULES := libsonic_jni
+LOCAL_REQUIRED_MODULES := libsoundtouch_jni
 
 include $(BUILD_PACKAGE)

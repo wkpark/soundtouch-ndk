@@ -3,7 +3,7 @@
 // For clarification, I asked if he intended to place it in the public domain,
 // and he said I have permission to do whatever I like with the code.
 
-package org.vinuxproject.sonic;
+package net.surina.soundtouchandroid;
 
 import android.media.AudioFormat;
 import android.media.AudioManager;
