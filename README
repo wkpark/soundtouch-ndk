@@ -1,4 +1,16 @@
-This is the libsonic Android NDK wrapper.  I, Bill Cox, wrote it in 2011, with
+This is a libsoundtouch Android NDK wrapper.
+
+jni/SoundTouch.cpp, net.surina.soundtouchandroid/SoundTouch.java are
+imported from https://github.com/svenoaks/SoundTouch-Android and
+slightly modified by Won-Kyu Park <wkpark at gmail.com> at 2014/11/28
+
+the usage of the SoundTouch.java is almost identical with the Sonic JNI.
+so I made a SoundtouchTest app for it based on the SonicTest app by Bill Cox.
+
+---------------------------
+original README by Bill Cox
+---------------------------
+Originally Bill Cox, wrote it in 2011, with
 the exception of AndroidAudioDevice.java, which was written by Mario Zechner,
 who posted it on his blog at
 
