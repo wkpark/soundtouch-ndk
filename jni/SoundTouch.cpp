@@ -96,6 +96,7 @@ static int process(SoundTouchStream&, SAMPLETYPE*, queue<jbyte>*, int, bool);
 static void setPitchSemi(SoundTouchStream&, float);
 static void setTempo(SoundTouchStream&, float);
 static void setTempoChange(SoundTouchStream&, float);
+static void setRate(SoundTouchStream&, float);
 static int copyBytes(jbyte*, queue<jbyte>*, int);
 
 #ifdef __cplusplus
@@ -232,6 +233,12 @@ extern "C" DLL_PUBLIC void Java_net_surina_soundtouchandroid_SoundTouch_setTempo
     setTempoChange(*soundTouch, tempoChange);
 }
 
+extern "C" DLL_PUBLIC void Java_net_surina_soundtouchandroid_SoundTouch_setRate(
+        JNIEnv *env, jobject thiz, jlong track, jfloat tempo) {
+    SoundTouchStream* soundTouch = getTrack(track);
+    setRate(*soundTouch, tempo);
+}
+
 extern "C" DLL_PUBLIC void Java_net_surina_soundtouchandroid_SoundTouch_setSpeech(
         JNIEnv *env, jobject thiz, jlong track, jboolean speech) {
     SoundTouchStream* soundTouch = getTrack(track);
@@ -357,6 +364,11 @@ static void setTempo(SoundTouchStream& soundTouch, float tempo) {
 static void setTempoChange(SoundTouchStream& soundTouch, float tempoChange) {
     soundTouch.setTempoChange(tempoChange);
 }
+
+static void setRate(SoundTouchStream& soundTouch, float rate) {
+    soundTouch.setRate(rate);
+}
+
 static void setup(SoundTouchStream& soundTouch, int channels, int sampleRate,
         int bytesPerSample, float tempoChange, float pitchSemi) {
     soundTouch.setBytesPerSample(bytesPerSample);
